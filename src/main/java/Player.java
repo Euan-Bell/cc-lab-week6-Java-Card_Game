@@ -7,4 +7,8 @@ public class Player {
         this.name = name;
         this.card = card;
     }
+
+    public void setCard(){
+
+    }
 }
