@@ -3,11 +3,10 @@ import java.util.Collections;
 
 public class CardDeck {
 
-    private Card card;
+
     private ArrayList<Card> deckofcards;
 
-    public CardDeck(Card card) {
-        this.card = card;
+    public CardDeck() {
         this.deckofcards = new ArrayList<>();
     }
 
@@ -25,4 +24,7 @@ public class CardDeck {
         Collections.shuffle(deckofcards);
     }
 
+    public Card removeCard() {
+        return this.deckofcards.remove(0);
+    }
 }

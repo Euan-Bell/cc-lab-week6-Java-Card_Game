@@ -6,21 +6,21 @@ import static org.junit.Assert.assertEquals;
 public class CardDeckTest {
 
     CardDeck cardDeck;
-    Card card;
 
     @Before
     public void before() {
-        card = new Card(SuitType.HEARTS, RankType.ACE);
-        cardDeck = new CardDeck(card);
+        cardDeck = new CardDeck();
+        cardDeck.buildDeck();
     }
 
     @Test
     public void canCountDeck() {
-        assertEquals(0, cardDeck.countDeck());
+        assertEquals(52, cardDeck.countDeck());
     }
 
-//    @Test
-//    public void canGetCardFromDeck() {
-//
-//    }
+    @Test
+    public void canGetCardFromDeck() {
+        cardDeck.removeCard();
+        assertEquals(51, cardDeck.countDeck());
+    }
 }
